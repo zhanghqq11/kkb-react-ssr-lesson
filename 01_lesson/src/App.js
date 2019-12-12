@@ -1,11 +1,11 @@
 import React ,{useState} from 'react';
+import {Router} from 'react-router-dom';
+import Index from './container/index'
+import About from './container/About'
 
-function App(props){
-    const [count,setCount] = useState(1);
-    return <div>
-         <h1>try kkb ssr hello {props.title} ! {count} </h1>
-         <button onClick={()=>setCount(count+1)}>add</button>
-        </div>
-}
-
-export default <App title="dennis"></App>;
+export default (
+    <div>
+        <Router path='/' exact component={Index}></Router>
+        <Router path='/About' exact component={About}></Router>
+    </div>
+)
