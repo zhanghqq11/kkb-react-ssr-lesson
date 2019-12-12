@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev:client":"webpack --config webpack.client.js --watch",
     "dev:server": "webpack --config webpack.server.js --watch",
-    "dev:start": "nodemon --watch build --exec node \"./build/bundle.js\"",
+    "dev:start":"nodemon --watch build --exec node \"./build/bundle.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -18,11 +19,5 @@
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-node-externals": "^1.7.2"
-  },
-  "dependencies": {
-    "babel-loader": "^8.0.6",
-    "express": "^4.17.1",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
   }
 }
