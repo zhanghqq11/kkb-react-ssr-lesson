@@ -1,7 +1,6 @@
-import React from 'react';
-import ReactDom from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from '../src/App'
 
-import App from '../src/App';
-
-// 注水
-ReactDom.hydrate(App,document.getElementById('root'))
+// 注水 客户端入口
+ReactDOM.hydrate(App, document.getElementById('root'))

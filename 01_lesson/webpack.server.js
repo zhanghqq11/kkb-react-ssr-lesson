@@ -1,6 +1,6 @@
 const path = require('path');
-const nodeExternals = require('webpack-node-externals')
-
+const nodeExternals = require('webpack-node-externals');
+// 服务端的webpack
 module.exports = {
     target:"node",
     mode:"development",
@@ -9,18 +9,19 @@ module.exports = {
     output:{
         filename:'bundle.js',
         path:path.resolve(__dirname,'build')
+
     },
-    module:{
-        rules:[
+    module: {
+        rules: [
             {
-                test:/\.js$/,
-                // babel 支持jsx
-                loader:'babel-loader',
-                exclude:/node_modeles/,
-                options:{
-                    presets:['@babel/preset-react',['@babel/preset-env']]
+                test: /\.js$/,
+                // 才能支持import 支持 jsx
+                loader: 'babel-loader',
+                exclude: /node_modules/,
+                options: {
+                    presets: ['@babel/preset-react', ['@babel/preset-env']]
                 }
-            }
+            },
         ]
     }
 }

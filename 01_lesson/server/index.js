@@ -1,8 +1,8 @@
-// babel 已经在npm了
-import React from 'react';
+// 这里的node代码，会用babel处理
+import React from 'react'
 import {renderToString} from 'react-dom/server'
 import express from 'express'
-import App from "../src/App.js"
+import App from '../src/App'
 
 const app = express()
 app.use(express.static('pubilc'))
@@ -14,6 +14,7 @@ app.get('/',(req,res)=>{
     res.send(`<html>
         <head>
             <meta charset="utf-8"/>
+
             <title>react ssr</title>
         </head>
         <body>
@@ -25,3 +26,4 @@ app.get('/',(req,res)=>{
 app.listen(9093,()=>{
     console.log("监听done")
 })
+
