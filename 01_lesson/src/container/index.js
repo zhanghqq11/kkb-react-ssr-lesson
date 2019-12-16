@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {getIndexList} from '../store/index'
 
 function Index(props){
+    console.log(props)
     const [count,setCount] = useState(1);
     useEffect(()=>{
         if(!props.list.length){

@@ -1,6 +1,6 @@
 import axios from 'axios'
 //首页的逻辑
-const GET_LIST = 'INDEX_GET_LIST'
+const GET_LIST = 'INDEX/GET_LIST'
 
 // actionCreater
 const CHANGE_LIST = list=>({
@@ -22,15 +22,15 @@ const defaultState = {
     list:[]
 }
 
-export default (State = defaultState, action)=>{
+export default (state = defaultState, action)=>{
     switch(action.type){
         case GET_LIST:
             const newState = {
-                ...State,
+                ...state,
                 list: action.list
             }
             return newState
         default:
-            return State
+            return state
     }
 }

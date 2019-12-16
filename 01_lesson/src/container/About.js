@@ -1,8 +1,9 @@
 import React from 'react';
 
 function About(props){
-    return <div>
+    console.log("about")
+    return (<div>
          <h1>this is about page</h1>
-        </div>
+        </div>)
 }
 export default About;

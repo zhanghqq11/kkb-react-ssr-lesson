@@ -1,6 +1,20 @@
 const expree = require('express')
 const app = expree()
 
+app.get('/api/user/info',(req,res)=>{
+    //支持跨域调用
+    res.header('Access-Control-Allow-Origin','*')
+    res.header('Access-Control-Allow-Methods','GET,POST,PUT')
+    res.header('Content-Type','application/json;charset=utf-8')
+    res.json({
+        code:0,
+        data:[
+            {name:"web",best:'best_etc'}
+        ]
+    })
+})
+
+
 app.get('/api/course/list',(req,res)=>{
     //支持跨域调用
     res.header('Access-Control-Allow-Origin','*')
